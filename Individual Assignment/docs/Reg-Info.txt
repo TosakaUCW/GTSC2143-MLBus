@@ -1,0 +1,30 @@
+This is a description of the Assign2-Regression dataset
+
+STA: Weather Station
+Date: Date
+Precip: Precipitation
+WindGustSpd: Peak Wind Gust Speed in Km/h
+MaxTemp: Maximum Temperature in degrees Celsius
+MinTemp: Minimum Temperature in degrees Celsius
+MeanTemp: Mean Temperature in degrees Celsius
+SnowFall: Snowfall and Ice Pellets in mm
+PoorWeather: A repeat of the TSHDSBRSGF Column
+YR: Observation Year
+MO: Observation Month
+DA: Observation Day
+PRCP: Precipitation (in inches and hundreds)
+DR: Peak Wind Gust Direction (in tens of degrees)
+SPD: Peak Wind Gust Speed (in Knots)
+MAX: Maximum Temperature (in degrees Fahrenheit
+MIN: Minimum Temperature (in degrees Fahrenheit
+MEA: Mean Temperature (in degrees Fahrenheit
+SNF: Snowfall (in inches and tenths)
+SND: Snow Depth -- include Ice Pellets (in inches and tenths)
+ITH: Ice Thickness on Water (inches and tenths)
+PGT: Peak Wind Gust time (hours and tenths)
+TSHDSBRSGF: Day with Thunder;Sleet;Hail;Dust or Sand;Smoke or Haze;Blowing Snow;Rain;Glaze;Fog; (0= No, 1=Yes)
+SD3: Snow Depth at 0030 GMT includes ice pellets (in inches and tenths)
+RHX: 24-hour maximum relative humidity, as a whole percent
+RHN: 24-hour minimum relative humidity, as a whole percent
+RVG: River Gauge in Feet and tenths
+WTE: Water Equivalent of Snow and Ice on Ground in inches and hundredths
