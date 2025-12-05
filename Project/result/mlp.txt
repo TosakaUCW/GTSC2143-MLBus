@@ -1,0 +1,86 @@
+========== MLP 分类模型评估结果 ==========
+Accuracy (准确率):  0.895250
+Precision (加权):  0.897341
+Recall (加权):     0.895250
+F1-score (加权):   0.883623
+
+--- Classification Report ---
+              precision    recall  f1-score   support
+
+           0       0.92      0.52      0.67       800
+           1       0.89      0.99      0.94      3200
+
+    accuracy                           0.90      4000
+   macro avg       0.90      0.76      0.80      4000
+weighted avg       0.90      0.90      0.88      4000
+
+--- Confusion Matrix ---
+[[ 419  381]
+ [  38 3162]]
+
+========== 伪特征重要性（按从高到低排序） ==========
+                        feature  importance
+           debt_to_income_ratio    0.087957
+   employment_status_Unemployed    0.086060
+                   credit_score    0.079498
+      employment_status_Student    0.075464
+      employment_status_Retired    0.074968
+              grade_subgrade_C3    0.074218
+          education_level_Other    0.072754
+                            age    0.072445
+employment_status_Self-employed    0.072436
+          marital_status_Single    0.072104
+                      loan_term    0.071548
+                    gender_Male    0.071401
+              grade_subgrade_C5    0.071282
+              grade_subgrade_D5    0.070811
+              grade_subgrade_C2    0.070349
+              grade_subgrade_F3    0.070305
+              grade_subgrade_E3    0.070269
+                  annual_income    0.070194
+              grade_subgrade_B1    0.070109
+              grade_subgrade_E1    0.070058
+              grade_subgrade_A5    0.069790
+         loan_purpose_Education    0.069636
+                 public_records    0.069367
+              grade_subgrade_D3    0.069284
+              grade_subgrade_B4    0.069061
+                    loan_amount    0.068739
+              grade_subgrade_F1    0.068590
+           num_of_open_accounts    0.068468
+              grade_subgrade_E2    0.068441
+              grade_subgrade_D2    0.068430
+                  interest_rate    0.068420
+              grade_subgrade_F4    0.068311
+                 monthly_income    0.068267
+              grade_subgrade_B5    0.068129
+                current_balance    0.068036
+       education_level_Master's    0.068011
+              grade_subgrade_B2    0.067951
+             total_credit_limit    0.067896
+              loan_purpose_Home    0.067879
+    education_level_High School    0.067847
+              grade_subgrade_C1    0.067770
+            education_level_PhD    0.067650
+           num_of_delinquencies    0.067609
+             loan_purpose_Other    0.067451
+                   gender_Other    0.067357
+               loan_purpose_Car    0.067230
+              grade_subgrade_A2    0.067204
+            delinquency_history    0.067008
+              grade_subgrade_F5    0.066727
+              grade_subgrade_D1    0.066423
+         marital_status_Married    0.066320
+                    installment    0.066317
+              grade_subgrade_B3    0.066152
+           loan_purpose_Medical    0.065732
+              grade_subgrade_A4    0.065664
+              grade_subgrade_C4    0.065633
+              grade_subgrade_E5    0.065507
+loan_purpose_Debt consolidation    0.065337
+              grade_subgrade_F2    0.065143
+          loan_purpose_Vacation    0.064831
+              grade_subgrade_D4    0.064607
+         marital_status_Widowed    0.064169
+              grade_subgrade_E4    0.063078
+              grade_subgrade_A3    0.062737
