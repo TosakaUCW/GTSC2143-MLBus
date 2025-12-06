@@ -14,6 +14,7 @@ from sklearn.metrics import (
     f1_score,
     classification_report,
     confusion_matrix,
+    roc_auc_score,
 )
 
 
@@ -117,6 +118,7 @@ def main():
 
     print(">>> 在测试集上进行预测...")
     y_pred = pipeline.predict(X_test)
+    y_proba = pipeline.predict_proba(X_test)[:, 1]
 
     print(">>> 计算评估指标...")
 
@@ -124,6 +126,7 @@ def main():
     prec = precision_score(y_test, y_pred, average="weighted", zero_division=0)
     rec = recall_score(y_test, y_pred, average="weighted", zero_division=0)
     f1 = f1_score(y_test, y_pred, average="weighted", zero_division=0)
+    auc = roc_auc_score(y_test, y_proba)  # 新增 AUC
     cls_report = classification_report(y_test, y_pred, zero_division=0)
     cm = confusion_matrix(y_test, y_pred)
 
@@ -132,6 +135,7 @@ def main():
     print(f"Precision (加权):  {prec:.4f}")
     print(f"Recall (加权):     {rec:.4f}")
     print(f"F1-score (加权):   {f1:.4f}")
+    print(f"AUC (ROC):         {auc:.4f}")  # 新增
     print("\n--- Classification Report ---")
     print(cls_report)
     print("--- Confusion Matrix ---")
@@ -151,6 +155,7 @@ def main():
     lines.append(f"Precision (加权):  {prec:.6f}\n")
     lines.append(f"Recall (加权):     {rec:.6f}\n")
     lines.append(f"F1-score (加权):   {f1:.6f}\n\n")
+    lines.append(f"AUC (ROC):         {auc:.6f}\n\n")  # 新增
 
     lines.append("--- Classification Report ---\n")
     lines.append(cls_report + "\n")

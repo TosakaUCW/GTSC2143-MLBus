@@ -4,6 +4,8 @@ Precision (加权):  0.897341
 Recall (加权):     0.895250
 F1-score (加权):   0.883623
 
+AUC (ROC):         0.885893
+
 --- Classification Report ---
               precision    recall  f1-score   support
 
