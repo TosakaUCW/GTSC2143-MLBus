@@ -97,30 +97,17 @@ def save_results_to_file(text: str, file_path: str) -> None:
 
 
 def main():
-    print(">>> 读取数据...")
     df = load_data(DATA_PATH)
-    print(f"数据维度：{df.shape[0]} 行, {df.shape[1]} 列")
-
-    print(">>> 拆分特征和标签...")
     X, y = split_features_and_target(df, TARGET_COLUMN)
     feature_names = X.columns
-
-    print(">>> 划分训练集和测试集 (test_size=0.2, random_state=42)...")
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42, stratify=y
     )
-
-    print(">>> 构建包含 StandardScaler 和 MLPClassifier 的 Pipeline...")
     pipeline = build_pipeline()
-
-    print(">>> 训练模型 (MLPClassifier)...")
     pipeline.fit(X_train, y_train)
 
-    print(">>> 在测试集上进行预测...")
     y_pred = pipeline.predict(X_test)
     y_proba = pipeline.predict_proba(X_test)[:, 1]
-
-    print(">>> 计算评估指标...")
 
     acc = accuracy_score(y_test, y_pred)
     prec = precision_score(y_test, y_pred, average="weighted", zero_division=0)
