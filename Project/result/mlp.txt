@@ -86,3 +86,6 @@ loan_purpose_Debt consolidation    0.065337
          marital_status_Widowed    0.064169
               grade_subgrade_E4    0.063078
               grade_subgrade_A3    0.062737
+
+ROC 曲线图文件: result/mlp_roc.png
+SHAP Summary 图文件: result/mlp_shap_summary.png
